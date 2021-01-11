@@ -1,0 +1,50 @@
+{% extends 'productos/index.html' %}
+{% load static %}
+{% block main%}
+<div class="container-fluid">
+    <h1 class="mt-4">Tabla Categoria</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="/index">Opcion</a></li>
+        <li class="breadcrumb-item active">Eliminar Categoria</li>
+    </ol>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table mr-1"></i>
+            Tabla Categoria
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>id_categoria</th>
+                            <th>Tipo</th>
+                            <th>Descripcion</th>
+                            <th>Opciones</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%if categorias %}
+                        {% for o in categorias %}
+                        <tr >
+                            <td >{{o.id_categoria}}</td>
+                            <td>{{o.tipo}}</td>
+                            <td>{{o.descripcion}}</td>
+                            <td>
+                                <form  name="myform{{o.id_categoria}}" action="{% url 'categoriaDelete' o.id_categoria %}">
+                                    <input type="button" class="btn-table" id="{{id_categoria}}" class="btn" onclick="confirmationMessage('{{o.id_categoria}}')" value="Eliminar" >
+                               </form>
+                            </td>
+                        </tr>
+                        {% endfor %} 
+                        {% else %}
+                        <h2>No se presentan registros de categoria </h2>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

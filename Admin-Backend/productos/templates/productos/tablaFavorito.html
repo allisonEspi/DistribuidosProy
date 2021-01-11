@@ -1,0 +1,51 @@
+{% extends 'productos/index.html' %}
+{% load static %}
+{% block main%}
+<div class="container-fluid">
+    <h1 class="mt-4">Tabla Categoria</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="/index">Opcion</a></li>
+        <li class="breadcrumb-item active">Eliminar Favorito</li>
+    </ol>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table mr-1"></i>
+            Tabla Favorito
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>id_favorito</th>
+                            <th>id_local</th>
+                            <th>id_usuario</th>
+                            <th>fecha</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%if favoritos %}
+                        {% for o in favoritos %}
+                        <tr >
+                            <td >{{o.id_favorito}}</td>
+                            <td>{{o.id_local}}</td>
+                            <td>{{o.id_usuario}}</td>
+                            <td>{{o.fecha}}</td>
+                            <td>
+                                <form  name="myform{{o.id_favorito}}" action="{% url 'favoritoDelete' o.id_favorito %}">
+                                    <input type="button" class="btn-table" id="{{id_favorito}}" class="btn" onclick="confirmationMessage('{{o.id_favorito}}')" value="Eliminar" >
+                               </form>
+                            </td>
+                        </tr>
+                        {% endfor %} 
+                        {% else %}
+                        <h2>No se presentan registros de Favorito </h2>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

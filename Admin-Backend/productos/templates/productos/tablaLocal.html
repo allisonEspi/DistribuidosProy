@@ -1,0 +1,71 @@
+{% extends 'productos/index.html' %}
+{% load static %}
+{% block main%}
+<div class="container-fluid">
+    <h1 class="mt-4">Tabla Local</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="/index">Opcion</a></li>
+        <li class="breadcrumb-item active">Eliminar Local</li>
+    </ol>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table mr-1"></i>
+            Tabla Local
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Id_Local</th>
+                            <th>Nombre Comercial</th>
+                            <th>Descripcion</th>
+                            <th>Logo</th>
+                            <th>Numero de Like</th>
+                            <th>Numero de Visitas</th>
+                            <th>Estrellas</th>
+                            <th>Direccion</th>
+                            <th>Categoria</th>
+                            <th>Longitud</th>
+                            <th>Latitud</th>
+                            <th>Administrador del local</th>
+                            <th>Opciones</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%if locales %}
+                        {% for o in locales %}
+                        <tr >
+                            <td >{{o.id_local}}</td>
+                            <td>{{o.nombre_comercial}}</td>
+                            <td>{{o.descripcion}}</td>
+                            <td>
+                                <img src="http://localhost:8000{{ MEDIA_URL }}{{o.src_logo}}" alt="imagen">
+                            </td>
+                            <td>{{o.likes}}</td>
+                            <td>{{o.vistas}}</td>
+                            <td>{{o.estrellas}}</td>
+                            <td>{{o.direccion}}</td>
+                            <td>{{o.categoria}}</td>
+                            <td>{{o.longitud}}</td>
+                            <td>{{o.latitud}}</td>
+                            <td>{{o.adminLocal}}</td>
+                            <td>
+                                <form  name="myform{{o.id_local}}" action="{% url 'localDelete' o.id_local %}">
+                                     <input type="button" class="btn-table" id="{{id_local}}" class="btn" onclick="confirmationMessage('{{o.id_local}}')" value="Eliminar" >
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %} 
+                        {% else %}
+                        <h2>No se presentan registros de locales </h2>
+                        {% endif %}
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
