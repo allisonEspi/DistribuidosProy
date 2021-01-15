@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-title>
+      TuristView
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/locales">
+        <ion-icon name="arrow-back" ></ion-icon>
+      </ion-button>
+      <div class="avatar">
+        <img src="../../assets/images/LOGO.png" alt="">
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+ <ion-content fullscreen id="InfoLocal">
+
+  <ion-card>
+    <!-- <div class="avatar2"> -->
+     
+    <!-- </div> -->
+    <ion-card-header>
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="3">
+            <div>
+      <ion-avatar>
+        <img src={{logo}} />
+      </ion-avatar>
+    </div>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+      <ion-card-title  class="direccion">{{nombreComercial}}</ion-card-title>
+      <ion-card-subtitle class="slogan">{{slogan}}</ion-card-subtitle>
+    
+    </ion-card-header>
+
+      <ion-card-content>
+          <section>
+            <ion-label class="direccion"><ion-icon name="location-outline"></ion-icon>{{direccion}}</ion-label>
+          </section>
+
+          <section>
+            <div class="star-rating">
+              <a >★</a>
+              <a >★</a>
+              <a >★</a>
+              <a >★</a>
+              <a >★</a>
+              </div>
+          </section>
+
+          <section>
+            <ion-label class="direccion"><ion-icon name="people-outline" ></ion-icon>{{like}} Seguidores  <ion-icon name="people-outline"></ion-icon>{{vistas}} visitas</ion-label>
+          </section>
+
+          <section>
+            <ion-label class="direccion">Acerca de nosotros</ion-label>
+          </section>
+          <section>
+            <ion-label>{{descripcion}}</ion-label>
+          </section>
+
+          <section >
+            <ion-button class="boton">
+              <ion-icon class="iconos" name="share-social"></ion-icon>
+            </ion-button>
+            <ion-button class="boton">
+              <ion-icon class="iconos" name="call"></ion-icon>
+            </ion-button >
+            <ion-button class="boton">
+              <ion-icon class="iconos" name="heart"></ion-icon>
+            </ion-button>
+            <ion-button class="boton"  (click)="addFavorite()"> 
+              <ion-icon id="fav" name="bookmark"></ion-icon>
+            </ion-button>
+              
+          </section>
+          
+      </ion-card-content>
+    </ion-card> 
+  </ion-content>
+    
+  

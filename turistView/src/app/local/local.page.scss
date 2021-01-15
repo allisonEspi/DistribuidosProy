@@ -1,0 +1,87 @@
+ion-card-header, ion-card-content{
+    text-align: center;
+}
+
+.star-rating {
+    $size: 35px;
+    $normal: #9a999e;
+    $selected:  blue;
+    
+    display: inline-block;
+    
+    a {
+      display: inline-block;
+      width: $size;
+      height: $size;
+      line-height: $size;
+      font-size: $size;
+      color: $normal;
+      text-decoration: none;
+      text-align: center;
+      transition: color .3s;
+    }
+    &:hover a {
+      color: $selected;
+      
+      &:hover ~ a {
+        color: $normal;
+      }
+    }
+    
+  }
+
+  ion-card{
+      margin-top: 0.5in;
+  }
+
+  ion-toolbar {
+    --background: transparent;
+    background-image: linear-gradient(90deg, rgba(48, 118, 232, 1) 0%,rgba(110, 55, 211, 1) 100%);
+    }
+  
+
+    .avatar {
+      display: flex;
+      padding-top: 0.3in;
+      padding-bottom: 0.2in;
+      justify-content: center;
+      padding-right: 0.5in;
+      img {
+          width: 40%;
+          height: 40%;
+      }
+  }
+
+
+section{
+  padding-bottom: 0.2in;
+}
+
+
+
+.boton{
+  --background: transparent !important;
+}
+
+.iconos{
+  font-size: 25px; //Preferred size here
+  color: blue;
+
+}
+
+#fav{
+  font-size: 25px; //Preferred size here
+  color: blue;
+}
+
+
+.direccion{
+  font-weight: bold;
+  color: black;
+}
+
+.slogan{
+  font-style: italic;
+}
+
+

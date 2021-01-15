@@ -1,0 +1,20 @@
+{
+    "login": {
+      "tabName": "Tab One"
+    },
+    "favoritos": {
+        "tabName": "Tab One"
+      },
+      "local": {
+        "tabName": "Tab One"
+      },
+      "notificaciones": {
+        "tabName": "Tab One"
+      },
+      "perfil": {
+        "tabName": "Tab One"
+      },
+      "scanner": {
+        "tabName": "Tab One"
+      }
+  }

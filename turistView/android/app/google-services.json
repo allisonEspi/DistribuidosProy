@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "963572973633",
+    "firebase_url": "https://loginturistview.firebaseio.com",
+    "project_id": "loginturistview",
+    "storage_bucket": "loginturistview.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963572973633:android:7c7505bf23b878f7e206c0",
+        "android_client_info": {
+          "package_name": "com.robot.solar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963572973633-0ao609b433fr1floptneiqe893rjc94b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.robot.solar",
+            "certificate_hash": "1c29755dc06533b7a3bba22517b2e1cd435067d6"
+          }
+        },
+        {
+          "client_id": "963572973633-294dgmq8ea4qll8eol4o53ucb7alcitv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.robot.solar",
+            "certificate_hash": "15b75e959bdb36627a24b68050bd1bdf23a3d089"
+          }
+        },
+        {
+          "client_id": "963572973633-r54agkcloh5k2nkfprqm4khi549j1fc1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.robot.solar",
+            "certificate_hash": "8c8b5c4c55827f2c8577666ab0ade2350199f322"
+          }
+        },
+        {
+          "client_id": "963572973633-k9arp58evsrlflbune2hvupuoarn7494.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDmG36cupyro1LEi57JLSqjOasM7mGHDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963572973633-k9arp58evsrlflbune2hvupuoarn7494.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "963572973633-r7ac8hf27pdooqajtsvdojrr3phi9vus.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.robot.solar"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

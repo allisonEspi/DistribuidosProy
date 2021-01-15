@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/..">
+        <ion-icon name="arrow-back" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+  <div class="avatar">
+    <img src="../../assets/images/LOGO.png" alt="">
+  </div>
+  <div class="reset">
+    <ion-label  >
+      <p class="texto">
+        Ingresa tu correo electrónico para recuperar tu contraseña</p>
+    </ion-label>
+    <ion-item class="iteminput">
+      <ion-input type="text" [(ngModel)]="email" name="email"  placeholder="Correo Electrónico"></ion-input>
+    </ion-item>
+    <section>
+      <ion-button class="boton" shape="round" (click)="sendLinkReset()">Recuperar</ion-button>
+    </section>
+  </div>
+</ion-content>

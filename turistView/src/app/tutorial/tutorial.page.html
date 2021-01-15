@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    
+      <div class="avatar">
+        <img src="../../assets/images/LOGO.png" alt="">
+      </div>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-slides [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
+    <ion-slide *ngFor="let img of texts">
+      <p>{{img}}</p>
+    </ion-slide>
+  </ion-slides>
+  <section>
+    <ion-button class="boton" shape="round" (click)="exitTutorial()">Entendido!</ion-button>
+  </section>
+  <section>
+    <ion-button class="Blanco" shape="round" (click)="exitTutorial()">Omitir</ion-button>
+  </section>
+ 
+</ion-content>
+
+

@@ -1,0 +1,8 @@
+{
+  "name": "turistView",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+
+}

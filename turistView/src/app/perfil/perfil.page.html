@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <div class="avatar">
+        <img src="../../assets/images/LOGO.png" alt="">
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-button class="edit" (click)="editInfo()">
+    <ion-icon name="create-outline"></ion-icon>
+  </ion-button>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="3">
+  <div >
+    <ion-avatar>
+    <img src={{image}} alt="foto de perfil">
+  </ion-avatar>
+  </div>
+</ion-col>
+</ion-row>
+</ion-grid>
+  
+  <ion-item class="iteminput">
+    <ion-input type="text" [(ngModel)]="nombre" name="nombre" required="true" readonly={{read}} ></ion-input>
+  </ion-item>
+
+  <ion-item class="iteminput">
+    <ion-input type="text" [(ngModel)]="apellido" name="apellido" required="true" readonly={{read}} ></ion-input>
+  </ion-item>  
+
+  <ion-item class="iteminput">
+    <ion-input type="text" [(ngModel)]="email" name="email" required="true" readonly=true ></ion-input>
+  </ion-item>
+
+  <ion-item class="iteminput">
+    <ion-input type="text" [(ngModel)]="telefono" name="numero" required="true" readonly={{read}} ></ion-input>
+  </ion-item>
+  
+  <section>
+    <ion-button class="boton" shape="round" >Desactivar Cuenta</ion-button>
+    <ion-button class="boton" shape="round" *ngIf="status" (click)="setPerfil()">Guardar Cambios</ion-button>
+  </section>
+  
+</ion-content>
+

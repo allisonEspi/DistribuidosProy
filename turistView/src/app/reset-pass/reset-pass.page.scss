@@ -1,0 +1,56 @@
+section{
+    margin: 70px;
+}
+
+
+ion-item{
+    margin: 15px;
+}
+
+ion-content.background{
+    --background: url('/assets/images/FONDO_INICIO_SESION-02.png') 0 0/100% 100% no-repeat;
+  }
+
+
+.texto{
+    text-align: center;
+    padding: 0.2in;
+    color: #ffffff;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    padding-top: 1in;
+    padding-bottom: 2in;
+    img {
+        width: 40%;
+        height: 40%;
+    }
+}
+
+.iteminput{
+    border-radius: 30px;
+    border: 1px solid #000000;
+    --background: #ffffff;
+    color: #000000;
+}
+
+ion-content{
+    text-align: center;
+}
+
+ion-button{
+    text-align: center;
+}
+
+ion-toolbar{
+    --background: transparent !important;
+}
+
+.boton {
+    --background: transparent;
+    border-radius: 2in;
+    background-image: linear-gradient(90deg, rgba(48, 118, 232, 1) 0%,rgba(110, 55, 211, 1) 100%);
+    text-transform: none;
+    }

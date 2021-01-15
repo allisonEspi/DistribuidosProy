@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "loginturistview": {
+      "hosting": {
+        "app": [
+          "loginturistview"
+        ]
+      }
+    }
+  }
+}

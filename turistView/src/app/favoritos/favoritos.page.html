@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <div class="avatar">
+        <img src="../../assets/images/LOGO.png" alt="">
+      </div>
+       
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"  > 
+  <ion-searchbar inputmode="search"></ion-searchbar>
+    <ion-card *ngFor="let q of locales; let j = index" id="cardLocal">    
+      <ion-card-content>
+        <ion-list lines="none">
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src={{q.logo}} alt="">
+          </ion-avatar>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-label>
+                  <h1><a href="/local/{{q.idLocal}}">{{q.nombreComercial}}</a></h1>
+                  <p>{{q.slogan}}</p>
+                  <h3><ion-icon name="location"></ion-icon>{{q.direccion}}</h3>
+                </ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-button fill="clear">
+                  <ion-icon slot="end" ios="heart" md="heart-sharp"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+      </ion-card-content>
+    </ion-card>
+   
+  
+
+</ion-content>

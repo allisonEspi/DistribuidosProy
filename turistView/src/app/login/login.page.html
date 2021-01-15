@@ -1,0 +1,55 @@
+ 
+<ion-content padding class="background">
+  <div class="avatar">
+    <img src="../../assets/images/LOGO.png" alt="">
+  </div>
+  <div class="login">
+    <ion-item class="iteminput">
+      <ion-input placeholder="Correo Electrónico" type="text" [(ngModel)]="email" name="email" required="true"></ion-input>
+    </ion-item>
+    <ion-item class="iteminput">
+        <ion-input placeholder="Contraseña" [(ngModel)]="password" type="password" name="password" required="true"></ion-input>
+    </ion-item>
+    
+    <section class="textoCentral">
+      <ion-label><a routerLink="/reset-pass">¿Olvidaste tu contraseña?</a></ion-label>
+    </section>
+
+    <div class="botones">
+    <section>
+      <ion-button class="boton"  shape="round" (click)="doLogin()">
+        Ingresar
+      </ion-button>
+    </section>
+    
+    <section class="texto">
+      <ion-label>------------------------------------ó------------------------------------</ion-label>
+    </section>
+
+    <section >
+      <section>
+        <ion-label class="texto">Ingresa con</ion-label>
+      </section>
+      <ion-button class="twitter">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-button>
+      <ion-button class="fb" (click)="loginFacebook()">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-button>
+      <ion-button class="google" (click)="loginGoogle()">
+        <ion-icon name="logo-google"></ion-icon>
+    </ion-button>
+    </section>
+    
+
+  </div>
+
+  </div>
+
+  <ion-footer >
+    <section >
+      <ion-label floating class="texto" >¿Nuevo Usuario?<a routerLink="/register">¡Regístrate aquí!</a></ion-label>
+    </section>
+  </ion-footer>
+  
+</ion-content>

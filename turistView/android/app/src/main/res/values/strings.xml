@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">turistView</string>
+    <string name="title_activity_main">turistView</string>
+    <string name="package_name">com.robot.solar</string>
+    <string name="custom_url_scheme">com.robot.solar</string>
+    <string name="fb_app_id">2688050558079706</string>
+    <string name="fb_app_name">turistView</string>
+
+</resources>
